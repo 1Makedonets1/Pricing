@@ -9,30 +9,51 @@
 
 .ba-container {
     background: $bg-color;
-    padding: 160px 0px 145px 0px;
     font-family: 'Roboto', sans-serif;
 }
 
 .ba-pricing {
-    max-width: 1068px;
+    max-width: 768px;
     margin: auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    max-width: 768px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
     
 
     @include e(col) {  
         flex-direction: column;
         background: $lite-color;
-        width: 30%;
+        width: 70%;
         height: 540px;
         padding-top: 40px;
+        margin-top: 50px;
     }
 
     @include e(col--center) {
-        height: 600px;
-        width: 35%;
+        height: 630px;
+        width: 70%;
     }
+}
+
+.ti-money {
+    vertical-align: super;
+    color: $text-color;
+    font-size: 24px;
+}
+
+.index {    
+    color: $text-color;
+    font-size: 16px;
+}
+
+.icon {
+    font-size: 36px;
 }
 
 .ba-price {
@@ -59,9 +80,9 @@
         height: 300px;
         margin: auto;
         background: $wite-color;
-        padding: 40px 97px 0px 97px;
+        padding: 40px 0;
         border-radius: 150px 150px 0px 0px;
-        
+        margin-bottom: -27px;
     }
 
     @include e(body--center) {
@@ -73,7 +94,7 @@
     }
 
     @include e(footer) {
-        padding-top: 50px;
+        padding-top: 30px;
         text-align: center;
         color:#A9A9A9;
         font-family: roboto;
@@ -85,25 +106,29 @@
     width: 36px;
     height: 36px;
     margin: auto;
+}
 
-    @include e(list) {
-        width: 300px;
-        height: 180px;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding-top: 30px;
-    }
+.icon-list {
+    width: 150px;
+    height: 180px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+
+.list-center {
+    width: 175px;
 }
 
 .ba-button {
-    position: absolute;
     display: block;
     width: 200px;
     height: 54px;
+    margin: auto;
     padding-top: 18px;
-    left: 60px;
+    left: 30%;
     bottom: -92px;
     background: $blue-button;
     border-radius: 50px;
@@ -116,7 +141,7 @@
     @include e(center) {
        bottom: 35px;
        background: $red-button;
-       left: 80px;
+       left: 22%;
     }
 }
 
@@ -124,6 +149,50 @@
     box-shadow: 1px 1px 5px $text-color;
     font-size: 16px;
 }
+
+@media (min-width: 576px) { 
+    .ba-pricing {
+        max-width: 768px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+@media (min-width: 768px) {
+    .ba-pricing {
+        max-width: 1068px;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+
+        @include e(col) {  
+            flex-direction: column;
+            background: $lite-color;
+            width: 30%;
+            height: 540px;
+            padding-top: 40px;    
+        }
+
+        @include e(col--center) {
+            height: 600px;
+            width: 35%;
+        }
+        
+    }
+
+    .icon {
+        width: 36px;
+        height: 36px;
+        margin: auto;
+    }
+
+}
+
 
 
 

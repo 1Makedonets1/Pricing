@@ -457,27 +457,48 @@ template {
 
 .ba-container {
   background: #9789F9;
-  padding: 160px 0px 145px 0px;
   font-family: "Roboto", sans-serif;
 }
 
 .ba-pricing {
-  max-width: 1068px;
+  max-width: 768px;
   margin: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  max-width: 768px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 50px;
 }
 .ba-pricing__col {
   flex-direction: column;
   background: #F5F4F9;
-  width: 30%;
+  width: 70%;
   height: 540px;
   padding-top: 40px;
+  margin-top: 50px;
 }
 .ba-pricing__col--center {
-  height: 600px;
-  width: 35%;
+  height: 630px;
+  width: 70%;
+}
+
+.ti-money {
+  vertical-align: super;
+  color: #181818;
+  font-size: 24px;
+}
+
+.index {
+  color: #181818;
+  font-size: 16px;
+}
+
+.icon {
+  font-size: 36px;
 }
 
 .ba-price {
@@ -502,8 +523,9 @@ template {
   height: 300px;
   margin: auto;
   background: #FFFFFF;
-  padding: 40px 97px 0px 97px;
+  padding: 40px 0;
   border-radius: 150px 150px 0px 0px;
+  margin-bottom: -27px;
 }
 .ba-price__body--center {
   height: 340px;
@@ -512,7 +534,7 @@ template {
   list-style: none;
 }
 .ba-price__footer {
-  padding-top: 50px;
+  padding-top: 30px;
   text-align: center;
   color: #A9A9A9;
   font-family: roboto;
@@ -524,8 +546,9 @@ template {
   height: 36px;
   margin: auto;
 }
-.icon__list {
-  width: 300px;
+
+.icon-list {
+  width: 150px;
   height: 180px;
   margin: auto;
   display: flex;
@@ -534,13 +557,17 @@ template {
   padding-top: 30px;
 }
 
+.list-center {
+  width: 175px;
+}
+
 .ba-button {
-  position: absolute;
   display: block;
   width: 200px;
   height: 54px;
+  margin: auto;
   padding-top: 18px;
-  left: 60px;
+  left: 30%;
   bottom: -92px;
   background: #6FCFFB;
   border-radius: 50px;
@@ -553,12 +580,49 @@ template {
 .ba-button__center {
   bottom: 35px;
   background: #FD8D7B;
-  left: 80px;
+  left: 22%;
 }
 
 .ba-button:hover {
   box-shadow: 1px 1px 5px #181818;
   font-size: 16px;
+}
+
+@media (min-width: 576px) {
+  .ba-pricing {
+    max-width: 768px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (min-width: 768px) {
+  .ba-pricing {
+    max-width: 1068px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .ba-pricing__col {
+    flex-direction: column;
+    background: #F5F4F9;
+    width: 30%;
+    height: 540px;
+    padding-top: 40px;
+  }
+  .ba-pricing__col--center {
+    height: 600px;
+    width: 35%;
+  }
+
+  .icon {
+    width: 36px;
+    height: 36px;
+    margin: auto;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
