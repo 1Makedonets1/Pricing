@@ -453,6 +453,7 @@ template {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: all 0.1s ease-in;
 }
 
 .ba-container {
@@ -472,18 +473,38 @@ template {
   flex-direction: column;
   align-items: center;
   padding-bottom: 50px;
+  padding-top: 50px;
 }
 .ba-pricing__col {
   flex-direction: column;
   background: #F5F4F9;
   width: 70%;
-  height: 620px;
-  padding-top: 40px;
+  height: 655px;
   margin-top: 50px;
+  overflow: hidden;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-top: 10px;
 }
-.ba-pricing__col--center {
-  height: 720px;
-  width: 70%;
+
+.ba-price__bubble {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.ba-price__bubble_bubble {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background: #FD8D7B;
+  margin-right: 30px;
+}
+.ba-price__bubble_img {
+  margin-right: 10px;
+}
+
+.side {
+  padding-top: 75px;
 }
 
 .ti-money {
@@ -528,9 +549,6 @@ template {
   padding: 40px 0;
   margin-bottom: -27px;
 }
-.ba-price__body--center {
-  height: 450px;
-}
 .ba-price li {
   list-style: none;
 }
@@ -540,6 +558,12 @@ template {
   color: #A9A9A9;
   font-family: roboto;
   font-size: 11px;
+}
+
+.ba-pricing__col:hover {
+  height: 695px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .icon {
@@ -578,15 +602,11 @@ template {
   font-size: 18px;
   text-transform: uppercase;
 }
-.ba-button__center {
-  bottom: 35px;
-  background: #FD8D7B;
-  left: 22%;
-}
 
 .ba-button:hover {
   box-shadow: 1px 1px 5px #181818;
   font-size: 16px;
+  background: #FD8D7B;
 }
 
 @media (min-width: 576px) {
@@ -611,10 +631,6 @@ template {
     flex-direction: column;
     background: #F5F4F9;
     width: 30%;
-    padding-top: 40px;
-  }
-  .ba-pricing__col--center {
-    width: 35%;
   }
 
   .icon {

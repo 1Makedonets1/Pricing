@@ -5,6 +5,7 @@
 * { margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: all .1s ease-in;;
 }
 
 .ba-container {
@@ -17,28 +18,50 @@
     margin: auto;
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: center;   
     max-width: 768px;
     margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-bottom: 50px;
+    padding-top: 50px;
     
 
     @include e(col) {  
         flex-direction: column;
         background: $lite-color;
         width: 70%;
-        height: 620px;
-        padding-top: 40px;
+        height: 655px;
         margin-top: 50px;
+        overflow: hidden;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding-top: 10px;
     }
 
-    @include e(col--center) {
-        height: 720px;
-        width: 70%;
+}
+
+.ba-price__bubble {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    @include m(bubble) {
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        background: $red-button;
+        margin-right: 30px;
     }
+
+    @include m(img) {
+        margin-right: 10px;
+    }
+}
+
+.side {
+    padding-top: 75px;
 }
 
 .ti-money {
@@ -85,11 +108,7 @@
         padding: 40px 0;
         margin-bottom: -27px;
     }
-
-    @include e(body--center) {
-        height: 450px;
-    }
-
+    
     li {
         list-style: none;
     }
@@ -101,6 +120,12 @@
         font-family: roboto;
         font-size:11px;
     }
+}
+
+.ba-pricing__col:hover {
+    height: 695px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .icon {
@@ -139,16 +164,13 @@
     font-size: 18px;
     text-transform: uppercase;
 
-    @include e(center) {
-       bottom: 35px;
-       background: $red-button;
-       left: 22%;
-    }
+
 }
 
 .ba-button:hover {
     box-shadow: 1px 1px 5px $text-color;
     font-size: 16px;
+    background: $red-button;
 }
 
 @media (min-width: 576px) { 
@@ -174,12 +196,7 @@
         @include e(col) {  
             flex-direction: column;
             background: $lite-color;
-            width: 30%;
-            padding-top: 40px;    
-        }
-
-        @include e(col--center) {
-            width: 35%;
+            width: 30%;   
         }  
     }
 
