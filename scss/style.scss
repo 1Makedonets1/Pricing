@@ -1,0 +1,130 @@
+@import "../node_modules/normalize-scss/sass/normalize/import-now"; 
+@import "_var.scss";
+@import "_mixins.scss";
+
+* { margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.ba-container {
+    background: $bg-color;
+    padding: 160px 0px 145px 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.ba-pricing {
+    max-width: 1068px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+    @include e(col) {  
+        flex-direction: column;
+        background: $lite-color;
+        width: 30%;
+        height: 540px;
+        padding-top: 40px;
+    }
+
+    @include e(col--center) {
+        height: 600px;
+        width: 35%;
+    }
+}
+
+.ba-price {
+    position: relative;
+
+    @include e(rate) {
+        color: $text-color;
+        font-size:60px;
+        text-align: center;
+        font-weight: 100;
+        padding-bottom: 20px;
+    }
+
+    @include e(position) {
+        color: $text-color;
+        font-size:24px;
+        text-align: center;
+        padding-bottom: 20px;
+        font-weight: 400;
+    }
+
+    @include e(body) {
+        width: 100%;
+        height: 300px;
+        margin: auto;
+        background: $wite-color;
+        padding: 40px 97px 0px 97px;
+        border-radius: 150px 150px 0px 0px;
+        
+    }
+
+    @include e(body--center) {
+        height: 340px;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    @include e(footer) {
+        padding-top: 50px;
+        text-align: center;
+        color:#A9A9A9;
+        font-family: roboto;
+        font-size:11px;
+    }
+}
+
+.icon {
+    width: 36px;
+    height: 36px;
+    margin: auto;
+
+    @include e(list) {
+        width: 300px;
+        height: 180px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-top: 30px;
+    }
+}
+
+.ba-button {
+    position: absolute;
+    display: block;
+    width: 200px;
+    height: 54px;
+    padding-top: 18px;
+    left: 60px;
+    bottom: -92px;
+    background: $blue-button;
+    border-radius: 50px;
+    text-decoration: none;
+    color: $wite-color;
+    text-align: center;
+    font-size: 18px;
+    text-transform: uppercase;
+
+    @include e(center) {
+       bottom: 35px;
+       background: $red-button;
+       left: 80px;
+    }
+}
+
+.ba-button:hover {
+    box-shadow: 1px 1px 5px $text-color;
+    font-size: 16px;
+}
+
+
+
+
